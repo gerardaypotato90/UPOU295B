@@ -51,6 +51,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/approved/{pid}/{id}', [\App\Http\Controllers\ApprovedPatientController::class, 'approved'])->name('approved');
     Route::get('/cancel/{pid}/{id}', [\App\Http\Controllers\CancelController::class, 'cancel'])->name('cancel');
     Route::get('/doctorsappointment', [\App\Http\Controllers\DoctorAppointmentController::class, 'drplist'])->name('doctorsappointment');
+
+    Route::get('/upload', [\App\Http\Controllers\ImageUploadController::class, 'create'])->name('upload');
+    Route::post('upload', [\App\Http\Controllers\ImageUploadController::class, 'store'])->name('upload.store');
+
     //
     Route::get('/appointmentstatus/{id}', [\App\Http\Controllers\PatientCheckupStatusController::class, 'checkupstatus'])->name('appointmentstatus');
     Route::get('/patientnoshow/{id}', [\App\Http\Controllers\PatientCheckupStatusController::class, 'checkupnoshow'])->name('patientnoshow');
