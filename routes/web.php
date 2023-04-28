@@ -52,13 +52,16 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/cancel/{pid}/{id}', [\App\Http\Controllers\CancelController::class, 'cancel'])->name('cancel');
     Route::get('/doctorsappointment', [\App\Http\Controllers\DoctorAppointmentController::class, 'drplist'])->name('doctorsappointment');
 
-    Route::get('/upload', [\App\Http\Controllers\ImageUploadController::class, 'create'])->name('upload');
-    Route::post('upload', [\App\Http\Controllers\ImageUploadController::class, 'store'])->name('upload.store');
+    Route::get('/upload/{pid}/{did}', [\App\Http\Controllers\ImageUploadController::class, 'create'])->name('upload');
+    Route::post('upload/{pid}/{did}', [\App\Http\Controllers\ImageUploadController::class, 'store'])->name('upload.store');
+
+    Route::get('/patientsdiagnosis', [\App\Http\Controllers\PatientsDiagnosisController::class, 'create'])->name('patientsdiagnosis');
 
     //
     Route::get('/appointmentstatus/{id}', [\App\Http\Controllers\PatientCheckupStatusController::class, 'checkupstatus'])->name('appointmentstatus');
     Route::get('/patientnoshow/{id}', [\App\Http\Controllers\PatientCheckupStatusController::class, 'checkupnoshow'])->name('patientnoshow');
     Route::get('/doctorspatientslist', [\App\Http\Controllers\PatientListController::class, 'drplist'])->name('doctorspatientslist');
+    Route::get('/patientsresults', [\App\Http\Controllers\PatientsResultsController::class, 'patientlist'])->name('patientsresults');
     Route::view('editprofile', 'editprofile')->name('editprofile');
     Route::put('editprofile', [\App\Http\Controllers\ProfileController::class, 'update'])
         ->name('editprofile.update');
@@ -82,6 +85,7 @@ Route::group(['middleware' => 'auth'], function() {
         ->name('docprofile.update');
     Route::get('/doctorschedule/{id}', [\App\Http\Controllers\docscheduleController::class, 'docsched'])->name('doctorschedule');
     Route::post('doctorschedule/{id}', [\App\Http\Controllers\docscheduleController::class, 'bookpatient'])->name('doctorschedule.bookpatient');
+    Route::get('/download/{filename}', [\App\Http\Controllers\DownloadController::class, 'downloads'])->name('download.downloads');
 
    
 
