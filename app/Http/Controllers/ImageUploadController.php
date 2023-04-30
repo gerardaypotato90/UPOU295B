@@ -11,6 +11,7 @@ class ImageUploadController extends Controller
 {
     public function create($patientid, $doctorid)
     {
+        $user =  DB::select('select * from users where id ='.$patientid.'');
         $photos = upload::where('doctorid', '=', $doctorid)
                         ->where('patientid', '=', $patientid)
                         ->get();
@@ -18,6 +19,7 @@ class ImageUploadController extends Controller
             'patientid' => $patientid,
             'doctorid' => $doctorid,
             'photos' => $photos,
+            'user' => $user[0]->name,
         ]); 
     }
 

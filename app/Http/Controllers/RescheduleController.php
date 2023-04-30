@@ -35,10 +35,12 @@ class RescheduleController extends Controller
                                     ->first();                                    
         if ($docapp) {
             $docapp->appointmentdate = $request->rescheddate;
+            $docapp->status = "Approved/Active";
             $docapp->save();
         }
         if ($patient) {
             $patient->appointmentdate = $request->rescheddate;
+            $patient->status = "Approved/Active";
             $patient->save();
         }
         return redirect()->route('reschedule', $id)

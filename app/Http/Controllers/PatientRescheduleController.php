@@ -38,13 +38,17 @@ class PatientRescheduleController extends Controller
                                             ->first();
         if ($patient) {
             $patient->appointmentdate = $request->rescheddate;
+            $patient->status = "For Approval";
             $patient->save();
         }
         if ($doctor) {
             $doctor->appointmentdate = $request->rescheddate;
+            $doctor->status = "For Approval";
             $doctor->save();
         }
         return redirect()->route('patientreschedule', $id)
                      ->with('success', 'Appointment rescheduled successfully');
     }
+
+    
 }

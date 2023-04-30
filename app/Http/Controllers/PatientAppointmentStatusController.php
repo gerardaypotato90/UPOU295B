@@ -14,9 +14,11 @@ class PatientAppointmentStatusController extends Controller
     //
     public function pdrlist()
     {
-
-        $plist = patientdoctorlist::where('patientid', Auth::user()->id)->get();
+        $plist = patientdoctorlist::where('patientid', Auth::user()->id)
+                          ->where('status', 'For Approval')
+                          ->get();
 
         return view('patientappointmentstatus', compact('plist'));
+
     }
 }

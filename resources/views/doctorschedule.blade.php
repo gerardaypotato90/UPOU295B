@@ -5,7 +5,13 @@
         </h2>
     </x-slot>
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
         
     <div class="py-12">
     <section>
@@ -34,7 +40,7 @@
 						      <td>{{$drs->availabletime}}</td>
 							  <td>
 							 	<div class="form-group">
-									<x-input type="text" name="appointmentdate" class="datepicker form-control" />
+									<x-input type="text" name="appointmentdate" id="datepicker" class="datepicker form-control" />
 								</div>
 							  </td>
 						      <td>
@@ -57,6 +63,14 @@
 		</div>
 	</form>
 	</section>
+	<script>
+		flatpickr("#datepicker", {
+			enableTime: true,
+			dateFormat: "Y-m-d h:i K",
+			time_24hr: false,
+			minDate: "today"
+		});
+	</script>
 
     </div>
 

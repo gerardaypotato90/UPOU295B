@@ -12,17 +12,18 @@
        
             <form method="POST" action="{{ route('upload', [$patientid, $doctorid]) }}" enctype="multipart/form-data">
                 @csrf
-                <div class="grid grid-cols-2 gap-6">
-                <div class="font-semibold text-xl text-gray-800 leading-tight">Patient Name: {{$photos[0]->patientname}}</div>
-                            <div class="grid grid-rows-2 gap-6">
-                                <div>
-                                    <x-label for="diagnosis" :value="__('Diagnosis')" />
-                                    <x-input id="diagnosis" class="block mt-1 w-full" type="text" name="diagnosis" :value="old('diagnosis')" autofocus />
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="font-semibold text-xl text-gray-800 leading-tight">Patient Name: {{$user}}</div>
+                    
+                                <div class="grid grid-rows-2 gap-6">
+                                    <div>
+                                        <x-label for="diagnosis" :value="__('Diagnosis')" />
+                                        <x-input id="diagnosis" class="block mt-1 w-full" type="text" name="diagnosis" :value="old('diagnosis')" autofocus />
+                                    </div>
                                 </div>
-                            </div>
-                
-                <input type="file" name="image">
-                <input type="submit" name="upload" class="btn btn-primary">
+                    
+                    <input type="file" name="image">
+                    <input type="submit" name="upload" class="btn btn-primary">
                 </div>
                
             </form>

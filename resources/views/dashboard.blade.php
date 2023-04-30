@@ -125,12 +125,12 @@
                         <div class="p-6">
                             <div class="flex items-center">
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><circle cx="12" cy="8" r="5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3,21 h18 C 21,12 3,12 3,21" /></svg>
-                                <a href="{{ route('addpatientappointment') }}" class="ml-4 text-lg leading-7 font-semibold">Add Patient</a>
+                                <a href="{{ route('addpatientappointment') }}" class="ml-4 text-lg leading-7 font-semibold">Schedule an appointment to patient.</a>
                             </div>
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                   Add new patient.
+                                The appointment booking function allows the admin to book appointments for patients with their chosen doctors, streamlining the process of scheduling and ensuring that patients receive prompt medical attention. This function simplifies the appointment booking process, making it easy for the admin to manage patient appointments efficiently.
                                 </div>
                             </div>
                         </div>
@@ -143,7 +143,8 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Add a new Doctor
+                                This function will allow you to add new doctors based on their designated department and also enable you to add their respective schedules.
+                                <br/><br/>Note: The doctors must first register and create an account before the admin can add them.
                                 </div>
                             </div>
                         </div>
@@ -156,7 +157,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Add a new department
+                                The purpose of this function is to provide the capability of adding new hospital departments to the system. In case a new department is established, this function allows the administrator to add it to the list of departments available for selection. This ensures that the system stays up-to-date with the latest developments and can accommodate the changing needs of the hospital. By enabling the addition of new departments, the system becomes more flexible and adaptable, and can provide a better experience for both patients and healthcare providers.
                                 </div>
                             </div>
                         </div>
@@ -169,7 +170,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Delete an existing user.
+                                The administrator of the system is empowered with the capability to delete user accounts, regardless of whether it pertains to a department, doctor, or patient account. By utilizing this function, the admin can easily remove any existing account from the system with minimal effort.
                                 </div>
                             </div>
                         </div>

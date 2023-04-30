@@ -48,6 +48,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('reschedule/{id}', [\App\Http\Controllers\RescheduleController::class, 'resched'])->name('reschedule.resched');
     Route::get('/patientreschedule/{id}', [\App\Http\Controllers\PatientRescheduleController::class, 'doctorsappststus'])->name('patientreschedule');
     Route::post('patientreschedule/{id}', [\App\Http\Controllers\PatientRescheduleController::class, 'resched'])->name('patientreschedule.resched');
+    Route::get('cancelappointment/{id}', [\App\Http\Controllers\CancelAppointmentController::class, 'cancel'])->name('cancelappointment');
     Route::get('/approved/{pid}/{id}', [\App\Http\Controllers\ApprovedPatientController::class, 'approved'])->name('approved');
     Route::get('/cancel/{pid}/{id}', [\App\Http\Controllers\CancelController::class, 'cancel'])->name('cancel');
     Route::get('/doctorsappointment', [\App\Http\Controllers\DoctorAppointmentController::class, 'drplist'])->name('doctorsappointment');
