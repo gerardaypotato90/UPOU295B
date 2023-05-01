@@ -28,7 +28,7 @@
                     <div>{{$user[0]->telephone_number}}</div>
                     
                     <div class="px-4 mt-1">
-                        <p class="fonts">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        <p class="fonts">Please provide a diagnosis and upload any relevant documents, such as prescriptions or lab results.</p>
                     </div>
                     
                                 <div class="grid grid-rows-2 gap-6">
