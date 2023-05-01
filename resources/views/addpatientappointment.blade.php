@@ -4,6 +4,12 @@
             {{ __('Add New Patient') }}
         </h2>
     </x-slot>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -51,7 +57,7 @@
                                 </div>
                                 <div>
                                     <x-label for="appointmentdate" :value="__('Appointment Date')" />
-                                    <x-input id="appointmentdate" class="block mt-1 w-full" type="text" name="appointmentdate" :value="old('appointmentdate')" autofocus />
+                                    <x-input type="text" name="appointmentdate" id="datepicker" class="datepicker form-control block mt-1 w-full" />
                                 </div>
                                 <div>
                                     <x-label for="status" :value="__('Status')" />
@@ -69,5 +75,13 @@
                 </div>
             </div>
         </div>
+        <script>
+		flatpickr("#datepicker", {
+			enableTime: true,
+			dateFormat: "Y-m-d h:i K",
+			time_24hr: false,
+			minDate: "today"
+		});
+	</script>
     </div>
 </x-app-layout>

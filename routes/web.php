@@ -78,6 +78,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/removedepartments', [\App\Http\Controllers\RemoveDepartmentsController::class, 'index'])->name('removedepartments');
     Route::get('/removedepartment/{id}', [\App\Http\Controllers\RemoveDepartmentsController::class, 'remove'])->name('removedepartments.remove');
     Route::get('/otp', [\App\Http\Controllers\AuthController::class, 'showOtpForm'])->name('show-otp-form');
+    Route::get('/doctortoschedule/{did}/{pid}', [\App\Http\Controllers\DoctorsToScheduleController::class, 'docsched'])->name('doctortoschedule');
+    Route::post('doctortoschedule/{did}/{pid}', [\App\Http\Controllers\DoctorsToScheduleController::class, 'bookpatient'])->name('doctortoschedule.bookpatient');
 });
 
 require __DIR__.'/auth.php';
