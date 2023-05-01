@@ -1518,3 +1518,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.profile-card .text-center {
+  text-align: center!important;
+}

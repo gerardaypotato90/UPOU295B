@@ -12,8 +12,24 @@
        
             <form method="POST" action="{{ route('upload', [$patientid, $doctorid]) }}" enctype="multipart/form-data">
                 @csrf
-                <div class="grid grid-cols-1 gap-6">
-                    <div class="font-semibold text-xl text-gray-800 leading-tight">Patient Name: {{$user}}</div>
+    <div class="profile-card">
+    <div class="container mt-5">
+                <div class="row d-flex justify-content-center">       
+        <div class="col-md-7">            
+            <div class="card p-3 py-4">               
+                <div class="text-center">
+                    <img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-circle img-center">
+                </div>
+                
+                <div class="text-center mt-3">
+                    <h5 class="mt-2 mb-0">{{$user[0]->name}}</h5>
+                    <div>{{$user[0]->email}}</div>
+                    <div>{{$user[0]->address}}</div>
+                    <div>{{$user[0]->telephone_number}}</div>
+                    
+                    <div class="px-4 mt-1">
+                        <p class="fonts">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    </div>
                     
                                 <div class="grid grid-rows-2 gap-6">
                                     <div>
@@ -24,6 +40,15 @@
                     
                     <input type="file" name="image">
                     <input type="submit" name="upload" class="btn btn-primary">
+                </div>  
+            </div>     
+            </div>
+            </div>
+        </div>
+    </div>
+
+                <div class="grid grid-cols-1 gap-6">
+                    
                 </div>
                
             </form>

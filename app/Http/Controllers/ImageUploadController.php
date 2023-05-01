@@ -19,7 +19,7 @@ class ImageUploadController extends Controller
             'patientid' => $patientid,
             'doctorid' => $doctorid,
             'photos' => $photos,
-            'user' => $user[0]->name,
+            'user' => $user,
         ]); 
     }
 
