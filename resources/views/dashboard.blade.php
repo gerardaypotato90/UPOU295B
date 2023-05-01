@@ -22,7 +22,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                   Edit Your Profile.
+                                As a user of the system, you have the ability to access your own profile, view its contents, and make any necessary updates to your personal information or account password. By clicking on the "Edit Profile" option, you can modify your profile details, such as your contact information or profile picture, to ensure that they remain current and accurate. Additionally, if you need to change your password for any reason, you can do so by clicking on the "Change Password" option and following the necessary steps to set a new password that meets the system's security requirements.
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Browse through available doctor's list to schedule appointment
+                                As a patient, you can browse through a comprehensive list of available doctors and their corresponding schedules, allowing you to easily choose the most convenient date and time for your appointment. With this feature, you can save time and effort in finding the right doctor to meet your healthcare needs, and have the flexibility to choose the most suitable schedule that fits your busy schedule.
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    See your Upcoming appointments
+                                By accessing this page, you can easily view all your upcoming appointments with doctors. This feature allows you to keep track of your medical appointments, ensuring that you don't miss any important meetings with healthcare professionals. In addition, you can also view the details of each appointment, such as the date, time, and location, which can help you prepare for your consultation ahead of time. With this convenient feature, you can stay on top of your healthcare needs and make the most out of your medical appointments.
                                 </div>
                             </div>
                         </div>
@@ -56,12 +56,12 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                             <div class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                                <a href="{{ route('patientsdiagnosis') }}" class="ml-4 text-lg leading-7 font-semibold">Diagnosis/Prescriptions/Laboratory Results</a>
+                                <a href="{{ route('patientsdiagnosis') }}" class="ml-4 text-lg leading-7 font-semibold">Medical Records</a>
                             </div>
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    See your prescriptions.
+                                As a patient in the system, you have the ability to view and keep track of your medical history. Specifically, you can access and review your past diagnosis, prescriptions, and lab results provided by your doctor. This feature allows you to stay informed about your health and ensure that you are receiving the proper care and treatment. Additionally, having this information readily available can be helpful if you need to share it with another healthcare provider in the future.
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                   Edit Your Profile.
+                                As a user of the system, you have the ability to access your own profile, view its contents, and make any necessary updates to your personal information or account password. By clicking on the "Edit Profile" option, you can modify your profile details, such as your contact information or profile picture, to ensure that they remain current and accurate. Additionally, if you need to change your password for any reason, you can do so by clicking on the "Change Password" option and following the necessary steps to set a new password that meets the system's security requirements.
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Browse through Patient's list
+                                The Patient Records feature allows you to easily browse through a list of patients, giving you quick access to their information and medical history. This can help you stay organized and informed, enabling you to provide better care and treatment to your patients.
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    See your Upcoming appointments
+                                As a doctor, you can easily access and manage your upcoming appointments with patients through your personal dashboard. This feature allows you to view and edit appointment details, as well as make any necessary changes to your schedule. Additionally, you can set up automatic appointment reminders to ensure that you never miss a scheduled appointment with a patient.
                                 </div>
                             </div>
                         </div>
@@ -110,12 +110,12 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                             <div class="flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg> 
-                                <a href="{{ route('patientsresults') }}" class="ml-4 text-lg leading-7 font-semibold">Diagnosis/Prescriptions/Laboratory Results</a>
+                                <a href="{{ route('patientsresults') }}" class="ml-4 text-lg leading-7 font-semibold">Medical Records</a>
                             </div>
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Diagnosis Results/Send Prescriptions
+                                As a doctor, you have the ability to send prescriptions, diagnose patients, and provide them with their lab results through the system. This makes it easier for you to manage and monitor your patients' health conditions, as well as track their progress over time. Additionally, you can access all of your patients' medical records in one convenient location, allowing you to provide more accurate and efficient healthcare services.
                                 </div>
                             </div>
                         </div>
@@ -165,7 +165,7 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                             <div class="flex items-center">
                             <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><circle cx="12" cy="8" r="5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3,21 h18 C 21,12 3,12 3,21" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Remove User</div>
+                                <a href="{{ route('removeuser') }}" class="ml-4 text-lg leading-7 font-semibold">Remove User</a>
                             </div>
 
                             <div class="ml-12">
