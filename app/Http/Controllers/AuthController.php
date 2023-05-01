@@ -36,7 +36,6 @@ class AuthController extends Controller
         ]);
 
         $user = User::where('Email', '=', $req->Email)->first();
-
         if($user)
         {
             if(Hash::check($req->Password, $user->Password))
@@ -103,4 +102,34 @@ class AuthController extends Controller
 
         return view('change-password', compact('user'));
     }
+
+    public function showOtpForm()
+    {
+        return view('otp');
+    }
+    public function authenticated(Request $request, $user)
+    {
+        if (!$user->otp_verified) {
+            Auth::logout();
+            session(['loginId' => $user->id]);
+            return redirect()->route('show-otp-form');
+        }
+
+        return redirect()->intended($this->redirectPath());
+    }
+    public function verifyOtp(Request $request)
+    {
+        $user = Auth::loginUsingId(session('loginId'));
+
+        if ($user && $user->otp === $request->otp) {
+            $user->otp_verified = true;
+            $user->save();
+            Auth::login($user);
+            session()->forget('loginId');
+            return redirect()->intended($this->redirectPath());
+        }
+
+        return back()->withErrors(['otp' => 'Invalid OTP code']);
+    }
+
 }

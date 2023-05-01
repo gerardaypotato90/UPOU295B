@@ -77,12 +77,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/removedoctor/{id}', [\App\Http\Controllers\RemoveDoctorsController::class, 'remove'])->name('removedoctors.remove');
     Route::get('/removedepartments', [\App\Http\Controllers\RemoveDepartmentsController::class, 'index'])->name('removedepartments');
     Route::get('/removedepartment/{id}', [\App\Http\Controllers\RemoveDepartmentsController::class, 'remove'])->name('removedepartments.remove');
-
-   
-
-
-    
-   
+    Route::get('/otp', [\App\Http\Controllers\AuthController::class, 'showOtpForm'])->name('show-otp-form');
 });
 
 require __DIR__.'/auth.php';
