@@ -30,16 +30,6 @@ class AddPatientAppointmentController extends Controller
         $pat =  DB::select('select * from users where id ='.$request->patientname.'');
         $dept =  DB::select('select * from doctorslists where doctorid= '.$request->doctorname.'');
 
-        $drpatientlist = new doctorpatientlist();       
-        $drpatientlist->patientid = $request->patientname;
-        $drpatientlist->doctorid = $request->doctorname;
-        $drpatientlist->doctorname = $doc[0]->name;
-        $drpatientlist->patientname = $pat[0]->name;
-        $drpatientlist->department = $dept[0]->department;
-        $drpatientlist->appointmentdate = $request->appointmentdate;
-        $drpatientlist->status = $request->status;  
-        $res = $drpatientlist->save();
-
         $doctorpatientapp = new doctorspatientappointment();       
         $doctorpatientapp->patientid = $pat[0]->id;
         $doctorpatientapp->doctorid = $doc[0]->id;
@@ -58,6 +48,18 @@ class AddPatientAppointmentController extends Controller
         $patientdoctorsched->appointmentdate = $request->appointmentdate;
         $patientdoctorsched->status = $request->status;
         $res2 = $patientdoctorsched->save();
+
+        $drpatientlist = new doctorpatientlist();       
+        $drpatientlist->patientid = $request->patientname;
+        $drpatientlist->doctorid = $request->doctorname;
+        $drpatientlist->doctorname = $doc[0]->name;
+        $drpatientlist->doctorspatientappointmentid = $doctorpatientapp->id;
+        $drpatientlist->patientname = $pat[0]->name;
+        $drpatientlist->patientdoctorlistsid = $patientdoctorsched->id;
+        $drpatientlist->department = $dept[0]->department;
+        $drpatientlist->appointmentdate = $request->appointmentdate;
+        $drpatientlist->status = $request->status;  
+        $res = $drpatientlist->save();
 
         return back()->with("success", "Records saved successfully");
     }

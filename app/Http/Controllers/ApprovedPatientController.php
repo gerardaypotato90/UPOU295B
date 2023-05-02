@@ -25,6 +25,11 @@ class ApprovedPatientController extends Controller
             ->where('doctorid', $drsched[0]->doctorid)
             ->where('doctorspatientappointmentid', $id)
             ->first();
+        $drpatientlist = doctorpatientlist::where('patientid', $drsched[0]->patientid)
+                                          ->where('doctorid', $drsched[0]->doctorid)
+                                          ->where('doctorspatientappointmentid', $docapp->id)
+                                          ->where('patientdoctorlistsid', $plist->id)
+                                          ->first();
 
         if ($docapp) {
             $docapp->status = 'Approved/Active';
@@ -34,18 +39,10 @@ class ApprovedPatientController extends Controller
             $plist->status = 'Approved/Active';
             $plist->save();
         }
-
-        $drpatientlist = new doctorpatientlist();       
-        $drpatientlist->patientid = $drsched[0]->patientid;
-        $drpatientlist->doctorid =  $drsched[0]->doctorid;
-        $drpatientlist->doctorname = $users[0]->name;
-        $drpatientlist->doctorspatientappointmentid = $docapp->id;
-        $drpatientlist->patientname = $drsched[0]->patientname;
-        $drpatientlist->patientdoctorlistsid = $plist->id;
-        $drpatientlist->department = $drsched[0]->department;
-        $drpatientlist->appointmentdate = $drsched[0]->appointmentdate;
-        $drpatientlist->status = "Approved/Active";  
-        $res = $drpatientlist->save();
+        if ($drpatientlist) {
+            $drpatientlist->status = 'Approved/Active';
+            $drpatientlist->save();
+        }
         
         return redirect('doctorspatientappointment');
     }

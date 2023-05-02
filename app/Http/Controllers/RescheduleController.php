@@ -32,7 +32,13 @@ class RescheduleController extends Controller
                                             ->first();
         
         $patient  = patientdoctorlist::where('doctorspatientappointmentid', $docapp->id)
-                                    ->first();                                    
+                                    ->first();        
+                                    
+        $drpatientlist = doctorpatientlist::where('patientid', $docapp->patientid)
+                                          ->where('doctorid', $docapp->doctorid)
+                                          ->where('doctorspatientappointmentid', $docapp->id)
+                                          ->where('patientdoctorlistsid', $patient->id)
+                                          ->first();
         if ($docapp) {
             $docapp->appointmentdate = $request->rescheddate;
             $docapp->status = "Approved/Active";
@@ -42,6 +48,10 @@ class RescheduleController extends Controller
             $patient->appointmentdate = $request->rescheddate;
             $patient->status = "Approved/Active";
             $patient->save();
+        }
+        if ($drpatientlist) {
+            $drpatientlist->status = 'Approved/Active';
+            $drpatientlist->save();
         }
         return redirect()->route('reschedule', $id)
                      ->with('success', 'Appointment rescheduled successfully');
