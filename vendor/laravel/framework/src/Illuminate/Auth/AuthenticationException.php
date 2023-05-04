@@ -2,9 +2,6 @@
 
 namespace Illuminate\Auth;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-
 use Exception;
 
 class AuthenticationException extends Exception
@@ -56,13 +53,6 @@ class AuthenticationException extends Exception
      */
     public function redirectTo()
     {
-        //return $this->redirectTo;
-        if (Auth::user()->usertype == 'Doctor') {
-            return '/docdashboard';
-        } elseif (Auth::user()->usertype == 'Patient') {
-            return '/patientdashboard';
-        } else {
-            return $this->redirectTo ?? '/admindashboard';
-        }
+        return $this->redirectTo;
     }
 }

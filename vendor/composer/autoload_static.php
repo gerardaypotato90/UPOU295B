@@ -165,6 +165,8 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         ),
         'A' => 
         array (
+            'App\\Http\\Controllers\\Auth\\' => 26,
+            'App\\Http\\Controllers\\' => 21,
             'App\\' => 4,
         ),
     );
@@ -491,6 +493,14 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'App\\Http\\Controllers\\Auth\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Http/Controllers/Auth',
+        ),
+        'App\\Http\\Controllers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Http/Controllers',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -519,6 +529,7 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
         'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
         'App\\Http\\Controllers\\Auth\\EmailVerificationPromptController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationPromptController.php',
+        'App\\Http\\Controllers\\Auth\\NewPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/NewPasswordController.php',
         'App\\Http\\Controllers\\Auth\\PasswordResetLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordResetLinkController.php',
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
@@ -530,6 +541,7 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         'App\\Http\\Controllers\\DocProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/DocProfileController.php',
         'App\\Http\\Controllers\\DoctorAppointmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/DoctorAppointmentController.php',
         'App\\Http\\Controllers\\DoctorAppointmentStatusController' => __DIR__ . '/../..' . '/app/Http/Controllers/DoctorAppointmentStatusController.php',
+        'App\\Http\\Controllers\\DoctorsToScheduleController' => __DIR__ . '/../..' . '/app/Http/Controllers/DoctorsToScheduleController.php',
         'App\\Http\\Controllers\\DownloadController' => __DIR__ . '/../..' . '/app/Http/Controllers/DownloadController.php',
         'App\\Http\\Controllers\\EditPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/EditPasswordController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
@@ -695,6 +707,7 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
+        'DeepCopy\\Filter\\ChainableFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/ChainableFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineCollectionFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineCollectionFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineEmptyCollectionFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineEmptyCollectionFilter.php',
         'DeepCopy\\Filter\\Doctrine\\DoctrineProxyFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Filter/Doctrine/DoctrineProxyFilter.php',
@@ -2785,6 +2798,12 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         'League\\CommonMark\\Event\\DocumentPreRenderEvent' => __DIR__ . '/..' . '/league/commonmark/src/Event/DocumentPreRenderEvent.php',
         'League\\CommonMark\\Event\\DocumentRenderedEvent' => __DIR__ . '/..' . '/league/commonmark/src/Event/DocumentRenderedEvent.php',
         'League\\CommonMark\\Event\\ListenerData' => __DIR__ . '/..' . '/league/commonmark/src/Event/ListenerData.php',
+        'League\\CommonMark\\Exception\\AlreadyInitializedException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/AlreadyInitializedException.php',
+        'League\\CommonMark\\Exception\\CommonMarkException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/CommonMarkException.php',
+        'League\\CommonMark\\Exception\\IOException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/IOException.php',
+        'League\\CommonMark\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/InvalidArgumentException.php',
+        'League\\CommonMark\\Exception\\LogicException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/LogicException.php',
+        'League\\CommonMark\\Exception\\MissingDependencyException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/MissingDependencyException.php',
         'League\\CommonMark\\Exception\\UnexpectedEncodingException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/UnexpectedEncodingException.php',
         'League\\CommonMark\\Extension\\Attributes\\AttributesExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Attributes/AttributesExtension.php',
         'League\\CommonMark\\Extension\\Attributes\\Event\\AttributesListener' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Attributes/Event/AttributesListener.php',
@@ -3017,6 +3036,7 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         'League\\CommonMark\\Parser\\MarkdownParserInterface' => __DIR__ . '/..' . '/league/commonmark/src/Parser/MarkdownParserInterface.php',
         'League\\CommonMark\\Parser\\MarkdownParserState' => __DIR__ . '/..' . '/league/commonmark/src/Parser/MarkdownParserState.php',
         'League\\CommonMark\\Parser\\MarkdownParserStateInterface' => __DIR__ . '/..' . '/league/commonmark/src/Parser/MarkdownParserStateInterface.php',
+        'League\\CommonMark\\Parser\\ParserLogicException' => __DIR__ . '/..' . '/league/commonmark/src/Parser/ParserLogicException.php',
         'League\\CommonMark\\Reference\\Reference' => __DIR__ . '/..' . '/league/commonmark/src/Reference/Reference.php',
         'League\\CommonMark\\Reference\\ReferenceInterface' => __DIR__ . '/..' . '/league/commonmark/src/Reference/ReferenceInterface.php',
         'League\\CommonMark\\Reference\\ReferenceMap' => __DIR__ . '/..' . '/league/commonmark/src/Reference/ReferenceMap.php',
@@ -3032,6 +3052,7 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         'League\\CommonMark\\Renderer\\Inline\\NewlineRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/Inline/NewlineRenderer.php',
         'League\\CommonMark\\Renderer\\Inline\\TextRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/Inline/TextRenderer.php',
         'League\\CommonMark\\Renderer\\MarkdownRendererInterface' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/MarkdownRendererInterface.php',
+        'League\\CommonMark\\Renderer\\NoMatchingRendererException' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/NoMatchingRendererException.php',
         'League\\CommonMark\\Renderer\\NodeRendererInterface' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/NodeRendererInterface.php',
         'League\\CommonMark\\Util\\ArrayCollection' => __DIR__ . '/..' . '/league/commonmark/src/Util/ArrayCollection.php',
         'League\\CommonMark\\Util\\Html5EntityDecoder' => __DIR__ . '/..' . '/league/commonmark/src/Util/Html5EntityDecoder.php',
@@ -4725,6 +4746,11 @@ class ComposerStaticInita5e576971a9ce5c2e57cf5dfabf06bec
         'Spatie\\Ignition\\ErrorPage\\ErrorPageViewModel' => __DIR__ . '/..' . '/spatie/ignition/src/ErrorPage/ErrorPageViewModel.php',
         'Spatie\\Ignition\\ErrorPage\\Renderer' => __DIR__ . '/..' . '/spatie/ignition/src/ErrorPage/Renderer.php',
         'Spatie\\Ignition\\Ignition' => __DIR__ . '/..' . '/spatie/ignition/src/Ignition.php',
+        'Spatie\\Ignition\\Solutions\\OpenAi\\DummyCache' => __DIR__ . '/..' . '/spatie/ignition/src/Solutions/OpenAi/DummyCache.php',
+        'Spatie\\Ignition\\Solutions\\OpenAi\\OpenAiPromptViewModel' => __DIR__ . '/..' . '/spatie/ignition/src/Solutions/OpenAi/OpenAiPromptViewModel.php',
+        'Spatie\\Ignition\\Solutions\\OpenAi\\OpenAiSolution' => __DIR__ . '/..' . '/spatie/ignition/src/Solutions/OpenAi/OpenAiSolution.php',
+        'Spatie\\Ignition\\Solutions\\OpenAi\\OpenAiSolutionProvider' => __DIR__ . '/..' . '/spatie/ignition/src/Solutions/OpenAi/OpenAiSolutionProvider.php',
+        'Spatie\\Ignition\\Solutions\\OpenAi\\OpenAiSolutionResponse' => __DIR__ . '/..' . '/spatie/ignition/src/Solutions/OpenAi/OpenAiSolutionResponse.php',
         'Spatie\\Ignition\\Solutions\\SolutionProviders\\BadMethodCallSolutionProvider' => __DIR__ . '/..' . '/spatie/ignition/src/Solutions/SolutionProviders/BadMethodCallSolutionProvider.php',
         'Spatie\\Ignition\\Solutions\\SolutionProviders\\MergeConflictSolutionProvider' => __DIR__ . '/..' . '/spatie/ignition/src/Solutions/SolutionProviders/MergeConflictSolutionProvider.php',
         'Spatie\\Ignition\\Solutions\\SolutionProviders\\SolutionProviderRepository' => __DIR__ . '/..' . '/spatie/ignition/src/Solutions/SolutionProviders/SolutionProviderRepository.php',
