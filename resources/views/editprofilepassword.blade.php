@@ -13,7 +13,7 @@
         <div class="col-md-7">            
             <div class="card p-3 py-4">               
                 <div class="text-center">
-                    <img src="{{ asset('images/prof.png') }}" width="100" class="rounded-circle img-center">
+                    <img src="{{ asset('images/logo.png') }}" width="100" class="rounded-circle img-center">
                 </div>
                 
                 <div class="text-center mt-3">

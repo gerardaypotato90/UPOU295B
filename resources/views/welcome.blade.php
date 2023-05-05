@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>DiagnosticMD</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -38,26 +38,41 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                <img src="{{ asset('images/DMD3.png') }}" width="200" height="150">
+                <img src="{{ asset('images/DiagnosticMD.png') }}" width="200" height="150">
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
+                    @if (Route::has('login'))
+                        @auth
                         <div class="p-6">
-                        <img src="{{ asset('images/med1.png') }}" width="500" height="250">
+                            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
+                            <img src="{{ asset('images/Dashboard.png') }}" width="500" height="250">
+                            </a>
                         </div>
-
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                        <img src="{{ asset('images/med2.png') }}" width="500" height="250">
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
+                            <img src="{{ asset('images/Dasgboard2.png') }}" width="500" height="250">
+                            </a>
                         </div>
+                        @else
+                        <div class="p-6">
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
+                                <img src="{{ asset('images/Log-in.png') }}" width="500" height="250">
+                            </a>
+                        </div>
+                            @if (Route::has('register'))
+                            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">
+                                    <img src="{{ asset('images/Register.png') }}" width="500" height="250">
+                                </a>
+                            </div>
+                            @endif
+                        @endauth
+                    @endif
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                        <img src="{{ asset('images/med3.png') }}" width="500" height="250">
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                        <img src="{{ asset('images/med4.png') }}" width="500" height="250 ">
-                        </div>
+                        
+                        
                     </div>
                 </div>
 
