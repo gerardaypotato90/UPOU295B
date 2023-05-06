@@ -14,6 +14,16 @@
 
                     <form method="POST" action="{{ route('editprofile.update') }}">
                         @method('PUT')
+                        @if(Session::has('success'))
+										<div class="alert alert-success">
+											{{ Session::get('success') }}
+										</div>
+                        @endif
+                        @if(Session::has('failed'))							
+                                    <div class="alert alert-danger">
+                                        {{ Session::get('failed') }}
+                                    </div>
+                        @endif
                         @csrf
                         <div class="grid grid-cols-2 gap-6">
                             <div class="grid grid-rows-2 gap-6">

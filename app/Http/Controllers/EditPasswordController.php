@@ -15,6 +15,6 @@ class EditPasswordController extends Controller
                 'password' => bcrypt($request->input('password'))
             ]);
         }
-        return redirect()->route('editpassword')->with('message', 'Profile saved successfully');
+        return redirect()->route('editpassword')->with('success', 'Profile saved successfully');
     }
 }

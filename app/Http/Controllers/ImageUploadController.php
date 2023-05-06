@@ -45,6 +45,7 @@ class ImageUploadController extends Controller
         $photo->diagnostic = $request->diagnosis;
         $photo->size = $size;
         $photo->save();
-        return redirect()->back();
+        //return redirect()->back();
+        return back()->with("success", "Results sent!!");
     }
 }

@@ -12,8 +12,19 @@
 
     <section>
 		<div class="container">
+		<x-auth-validation-errors />
 		<form action="{{ route('scheduleappointment.doclist') }}" method="GET">
 			@method('GET')
+						@if(Session::has('success'))
+                                    <div class="alert alert-success">
+                                        {{ Session::get('success') }}
+                                    </div>
+                                @endif
+                                @if(Session::has('failed'))
+                                    <div class="alert alert-danger">
+                                        {{ Session::get('failed') }}
+                                    </div>
+                        @endif
             @csrf
 			<select name="query">
 			<option value="">Select Department</option>

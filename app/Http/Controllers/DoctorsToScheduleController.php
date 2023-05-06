@@ -53,6 +53,6 @@ class DoctorsToScheduleController extends Controller
 
         
 
-        return back()->with("success", "Thank you!!");
+        return back()->with("success", "Patient is now scheduled");
     }
 }

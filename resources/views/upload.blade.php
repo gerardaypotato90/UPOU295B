@@ -13,12 +13,22 @@
             <form method="POST" action="{{ route('upload', [$patientid, $doctorid]) }}" enctype="multipart/form-data">
                 @csrf
     <div class="profile-card">
+                    @if(Session::has('success'))	
+					<div class="alert alert-success">
+						{{ Session::get('success') }}
+					</div>
+                    @endif
+                    @if(Session::has('failed'))						
+                    <div class="alert alert-danger">
+                        {{ Session::get('failed') }}
+                    </div>
+                    @endif
     <div class="container mt-5">
                 <div class="row d-flex justify-content-center">       
         <div class="col-md-7">            
             <div class="card p-3 py-4">               
                 <div class="text-center">
-                    <img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-circle img-center">
+                    <img src="{{ asset('images/logo.png') }}" width="100" class="rounded-circle img-center">
                 </div>
                 
                 <div class="text-center mt-3">

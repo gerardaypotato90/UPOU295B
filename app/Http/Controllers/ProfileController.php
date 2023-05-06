@@ -10,6 +10,6 @@ class ProfileController extends Controller
     public function update(UpdateProfileRequest $request)
     {
         auth()->user()->update($request->only('name', 'email', 'address', 'telephone_number'));
-        return redirect()->route('editprofile')->with('message', 'Profile saved successfully');
+        return redirect()->route('editprofile')->with('success', 'Profile saved successfully');
     }
 }

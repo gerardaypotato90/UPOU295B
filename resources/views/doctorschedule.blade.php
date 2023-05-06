@@ -14,9 +14,33 @@
 
         
     <div class="py-12">
+	
     <section>
+	<x-auth-validation-errors />
 	<form method="POST" action="{{ route('doctorschedule', ['id' => $doctorScheduleId]) }}">
 		@method('POST')
+						@if(Session::has('success'))
+						<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+							<div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+								<div class="p-6 bg-white border-b border-gray-200">
+										<div class="alert alert-success">
+											{{ Session::get('success') }}
+										</div>
+								</div>
+							</div>
+						</div>
+                                @endif
+                                @if(Session::has('failed'))
+						<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+							<div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+								<div class="p-6 bg-white border-b border-gray-200">								
+                                    <div class="alert alert-danger">
+                                        {{ Session::get('failed') }}
+                                    </div>
+								</div>
+							</div>
+						</div>
+                        @endif
 		@csrf
 		<div class="container">
 			<div class="row">

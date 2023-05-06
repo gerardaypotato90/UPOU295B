@@ -65,6 +65,6 @@ class docscheduleController extends Controller
 
         
 
-        return back()->with("success", "Thank you!!");
+        return back()->with("success", "Thank you! Please check if your upcoming appointment has been approved in Upcoming Appointments tab");
     }
 }
