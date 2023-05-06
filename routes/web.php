@@ -37,6 +37,10 @@ Route::group(['middleware' => 'auth'], function() {
     })->name('removeuser');
 
     
+
+    Route::get('/patientmessages', [\App\Http\Controllers\PatientMessageController::class, 'patientsmessage'])->name('patientmessages');
+    Route::get('/doctorsmessages', [\App\Http\Controllers\DoctorsMessageController::class, 'doctorsmessage'])->name('doctorsmessages');
+    
     Route::get('/patientappointmentstatus', [\App\Http\Controllers\PatientAppointmentStatusController::class, 'pdrlist'])->name('patientappointmentstatus');
     Route::get('/doctorspatientappointment', [\App\Http\Controllers\DoctorAppointmentStatusController::class, 'doctorsappststus'])->name('doctorspatientappointment');
     Route::get('/reschedule/{id}', [\App\Http\Controllers\RescheduleController::class, 'doctorsappststus'])->name('reschedule');

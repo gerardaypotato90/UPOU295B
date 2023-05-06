@@ -28,6 +28,9 @@
                     <x-nav-link :href="route('patientsdiagnosis')" :active="request()->routeIs('patientsdiagnosis')">
                         {{ __('Medical Records') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('patientmessages')" :active="request()->routeIs('patientmessages')">
+                        {{ __('Messages') }}
+                    </x-nav-link>
                     @elseif(Auth::user()->usertype == 'Doctor')
                     <x-nav-link :href="route('editprofilepassword')" :active="request()->routeIs('editprofilepassword')">
                         {{ __('Profile') }}
@@ -40,6 +43,9 @@
                     </x-nav-link>
                     <x-nav-link :href="route('patientsresults')" :active="request()->routeIs('patientsresults')">
                         {{ __('Medical Records') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('doctorsmessages')" :active="request()->routeIs('doctorsmessages')">
+                        {{ __('Messages') }}
                     </x-nav-link>
                     @else
                     <x-nav-link :href="route('addpatientappointment')" :active="request()->routeIs('addpatientappointment')">
@@ -118,6 +124,9 @@
                     <x-responsive-nav-link :href="route('patientsdiagnosis')" :active="request()->routeIs('patientsdiagnosis')">
                         {{ __('Medical Records') }}
                     </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('patientmessages')" :active="request()->routeIs('patientmessages')">
+                        {{ __('Messages') }}
+                    </x-responsive-nav-link>
                     @elseif(Auth::user()->usertype == 'Doctor')
                     <x-responsive-nav-link :href="route('editprofilepassword')" :active="request()->routeIs('editprofilepassword')">
                         {{ __('Profile') }}
@@ -130,6 +139,9 @@
                     </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('patientsresults')" :active="request()->routeIs('patientsresults')">
                         {{ __('Medical Records') }}
+                    </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('doctorsmessages')" :active="request()->routeIs('doctorsmessages')">
+                        {{ __('Messages') }}
                     </x-responsive-nav-link>
                     @else
                     <x-responsive-nav-link :href="route('addpatientappointment')" :active="request()->routeIs('addpatientappointment')">

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\doctorspatientappointment;
 use App\Models\doctorpatientlist;
 use App\Models\patientdoctorlist;
+use App\Models\dnotification;
 use App\Models\User;
 use Hash;
 use Session;
@@ -57,6 +58,15 @@ class PatientRescheduleController extends Controller
             $drpatientlist->status = 'For Approval';
             $drpatientlist->save();
         }
+
+        $pnotifications = new dnotification();
+        $pnotifications->doctorid = $drpatientlist->doctorid; 
+        $pnotifications->patientid = Auth::user()->id;
+        $pnotifications->patientname = Auth::user()->name;
+        $pnotifications->doctorname = $drpatientlist->doctorname;
+        $pnotifications->message = 'Patient has reschedule the appointment please check if you can approve or reschedule. Please check upcoming appointment.';
+        $res = $pnotifications->save();
+
         return redirect()->route('patientreschedule', $id)
                      ->with('success', 'Appointment rescheduled successfully');
     }

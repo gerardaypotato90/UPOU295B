@@ -9,6 +9,7 @@ use App\Models\patientdoctorlist;
 use App\Models\doctorpatientlist;
 use App\Models\doctorsschedule;
 use App\Models\doctorslist;
+use App\Models\dnotification;
 use Hash;
 use Session;
 use Auth;
@@ -62,6 +63,14 @@ class docscheduleController extends Controller
         $drpatientlist->appointmentdate = $request->appointmentdate;
         $drpatientlist->status = "For Approval";  
         $res = $drpatientlist->save();
+
+        $pnotifications = new dnotification();
+        $pnotifications->doctorid = $request->doctorid; 
+        $pnotifications->patientid = Auth::user()->id;
+        $pnotifications->patientname = Auth::user()->name;
+        $pnotifications->doctorname = $request->doctorname;
+        $pnotifications->message = 'You have a new appointment to approve. Please check upcoming appointment.';
+        $res = $pnotifications->save();
 
         
 

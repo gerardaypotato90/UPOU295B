@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\doctorspatientappointment;
 use App\Models\doctorpatientlist;
 use App\Models\patientdoctorlist;
+use App\Models\pnotification;
 use Hash;
 use Session;
 use Auth;
@@ -43,6 +44,14 @@ class CancelController extends Controller
             $drplist->status = 'Cancel';
             $drplist->save();
         }
+
+        $pnotifications = new pnotification();
+        $pnotifications->doctorid = $drplist->doctorid;    
+        $pnotifications->patientid = $drplist->patientid;
+        $pnotifications->patientname = $drplist->patientname;
+        $pnotifications->doctorname = $drplist->doctorname;
+        $pnotifications->message = 'Your appoinment has been cancelled, you can pick another date';
+        $res = $pnotifications->save();
         
         return redirect('doctorspatientappointment');
     }

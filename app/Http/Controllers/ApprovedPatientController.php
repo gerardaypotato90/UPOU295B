@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\doctorspatientappointment;
 use App\Models\doctorpatientlist;
 use App\Models\patientdoctorlist;
+use App\Models\pnotification;
 use Hash;
 use Session;
 use Auth;
@@ -43,6 +44,14 @@ class ApprovedPatientController extends Controller
             $drpatientlist->status = 'Approved/Active';
             $drpatientlist->save();
         }
+
+        $pnotifications = new pnotification();
+        $pnotifications->doctorid = $drpatientlist->doctorid;    
+        $pnotifications->patientid = $drpatientlist->patientid;
+        $pnotifications->patientname = $drpatientlist->patientname;
+        $pnotifications->doctorname = $drpatientlist->doctorname;
+        $pnotifications->message = 'Your appoinment is now approved please check Upcoming Appointments page';
+        $res = $pnotifications->save();
         
         return redirect('doctorspatientappointment');
     }
