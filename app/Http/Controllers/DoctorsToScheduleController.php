@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\doctorspatientappointment;
 use App\Models\patientdoctorlist;
+use App\Models\doctorpatientlist;
 use App\Models\doctorsschedule;
 use App\Models\doctorslist;
 use Hash;
@@ -51,6 +52,17 @@ class DoctorsToScheduleController extends Controller
         $patientdoctorsched->status = 'Approved/Active';
         $res2 = $patientdoctorsched->save();
 
+        $drpatientlist = new doctorpatientlist();       
+        $drpatientlist->patientid = $patid;
+        $drpatientlist->doctorid = $request->doctorid;
+        $drpatientlist->doctorname = $request->doctorname;
+        $drpatientlist->doctorspatientappointmentid = $doctorpatientapp->id;
+        $drpatientlist->patientname = $patients[0]->name;
+        $drpatientlist->patientdoctorlistsid = $patientdoctorsched->id;
+        $drpatientlist->department = $request->department;
+        $drpatientlist->appointmentdate = $request->appointmentdate;
+        $drpatientlist->status = 'Approved/Active';  
+        $res = $drpatientlist->save();
         
 
         return back()->with("success", "Patient is now scheduled");
