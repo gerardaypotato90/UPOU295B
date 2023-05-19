@@ -24,7 +24,7 @@
 						      <th scope="row">{{$patientd->patientname}}</th>
 						      <td>{{$patientd->diagnostic}}</td>
 						      <td><img src="{{ asset('storage/images/' . $patientd->imagename) }}" width="250" height="300"></td>
-                              <td><a href="{{ route('download.downloads', ['filename' => $patientd->imagename]) }}">Download Image</a></td>
+                              <td><a href="{{ route('download.downloads', ['filename' => $patientd->imagename]) }}" title="Download Image">Download Image</a></td>
 						    </tr>
 						@endforeach
 						  </tbody>

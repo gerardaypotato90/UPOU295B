@@ -32,8 +32,8 @@
 						      <td>{{$pl->status}}</td>
 						      <td>
 						      	<!--<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
-								  <a href="patientreschedule/{{$pl->id}}" class="btn btn-primary">Reschedule</a>
-								  <a href="cancelappointment/{{$pl->id}}" class="btn btn-primary">Cancel</a>
+								  <a href="patientreschedule/{{$pl->id}}" class="btn btn-primary" title="Reschedule">Reschedule</a>
+								  <a href="cancelappointment/{{$pl->id}}" class="btn btn-primary" title="Cancel">Cancel</a>
 				        	  </td>
 						    </tr>
 						@endforeach

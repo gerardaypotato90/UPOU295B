@@ -29,7 +29,7 @@
 						      
 						      <td>
 						      	<!--<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
-								  <a href="/doctorschedule/{{Auth::user()->id}}" class="btn btn-primary">Schedule an appoinment</a>
+								  <a href="/doctorschedule/{{Auth::user()->id}}" class="btn btn-primary" title="Schedule an appoinment">Schedule an appoinment</a>
 				        	  </td>
 						    </tr>
 						@endforeach

@@ -20,7 +20,7 @@
                         @foreach ($departments as $department)
 						    <tr class="alert" role="alert">
 						      <th scope="row">{{$department->departmentname}}</th>
-                              <td><a href="removedepartment/{{ $department->id }}">Remove</a></td>
+                              <td><a href="removedepartment/{{ $department->id }}" title="Remove">Remove</a></td>
 						    </tr>
 						@endforeach
 						  </tbody>

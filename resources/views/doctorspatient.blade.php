@@ -16,11 +16,11 @@
                         <div class="p-6">
                             <div class="flex items-center">
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><circle cx="12" cy="8" r="5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3,21 h18 C 21,12 3,12 3,21" /></svg>
-                                <a href="{{ route('doctorsappointment') }}" class="ml-4 text-lg leading-7 font-semibold">Patient Check History</a>
+                                <a href="{{ route('doctorsappointment') }}" class="ml-4 text-lg leading-7 font-semibold" title="Patient Check History">Patient Check History</a>
                             </div>
 
                             <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" aria-label="Browse through patient's history">
                                     Browse through patient's history.
                                 </div>
                             </div>
@@ -29,11 +29,11 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><circle cx="12" cy="8" r="5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3,21 h18 C 21,12 3,12 3,21" /></svg>
-                                <a href="{{ route('doctorspatientslist') }}" class="ml-4 text-lg leading-7 font-semibold">Patient List</a>
+                                <a href="{{ route('doctorspatientslist') }}" class="ml-4 text-lg leading-7 font-semibold" title="Patient List">Patient List</a>
                             </div>
 
                             <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm" aria-label="Browse through patient's list.">
                                     Browse through patient's list.
                                 </div>
                             </div>

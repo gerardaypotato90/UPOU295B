@@ -42,7 +42,7 @@
                                         <option atval="{{ $doctor->name }}" value="{{ $doctor->id }}">{{ $doctor->name }}</option>
                                         @endforeach
                                     </select>
-                                    <x-input id="doctornamev" class="block mt-1 w-full" type="hidden" name="doctornamev" :value="old('doctornamev')" autofocus />
+                                    <x-input id="doctornamev" class="block mt-1 w-full" type="hidden" name="doctornamev" :value="old('doctornamev')" aria-describedby="doctornamev" autofocus />
                                 </div>
                                 <div>
                                     <x-label for="patientname" :value="__('Patient Name')" />
@@ -52,16 +52,16 @@
                                         <option atval="{{ $patient->name }}" value="{{ $patient->id }}">{{ $patient->name }}</option>
                                         @endforeach
                                     </select>
-                                    <x-input id="patientnamev" class="block mt-1 w-full" type="hidden" name="patientnamev" :value="old('patientnamev')" autofocus />
+                                    <x-input id="patientnamev" class="block mt-1 w-full" type="hidden" name="patientnamev" :value="old('patientnamev')" aria-describedby="Patient Name" autofocus />
 
                                 </div>
                                 <div>
                                     <x-label for="appointmentdate" :value="__('Appointment Date')" />
-                                    <x-input type="text" name="appointmentdate" id="datepicker" class="datepicker form-control block mt-1 w-full" />
+                                    <x-input type="text" name="appointmentdate" id="datepicker" class="datepicker form-control block mt-1 w-full" aria-describedby="Appointment Date" />
                                 </div>
                                 <div>
                                     <x-label for="status" :value="__('Status')" />
-                                    <x-input id="status" class="block mt-1 w-full" type="text" name="status" :value="old('status')" autofocus />
+                                    <x-input id="status" class="block mt-1 w-full" type="text" name="status" :value="old('status')" aria-describedby="Status" autofocus />
                                 </div>                 
                             </div>
                            

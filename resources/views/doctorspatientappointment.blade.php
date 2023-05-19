@@ -32,13 +32,13 @@
 						      <td>{{$pl->status}}</td>
 						      <td>
 								@if($pl->status == 'For Approval')
-						      	  <a href="approved/{{$pl->patientid}}/{{$pl->id}}" class="btn btn-primary">Approved</a>
+						      	  <a href="approved/{{$pl->patientid}}/{{$pl->id}}" class="btn btn-primary" title="Approved">Approved</a>
 								@endif
 								@if($pl->status != 'Done Check-up')
-								  <a href="reschedule/{{$pl->id}}" class="btn btn-primary">Reschedule</a>
+								  <a href="reschedule/{{$pl->id}}" class="btn btn-primary" title="Reschedule">Reschedule</a>
 								@endif
 								@if($pl->status == 'Approved/Active')
-								  <a href="cancel/{{$pl->patientid}}/{{$pl->id}}" class="btn btn-primary">Cancel</a>
+								  <a href="cancel/{{$pl->patientid}}/{{$pl->id}}" class="btn btn-primary" title="Cancel">Cancel</a>
 								@endif
 				        	  </td>
 						    </tr>

@@ -51,11 +51,11 @@
                                 </div>
                                 <div>
                                     <x-label for="availabledays" :value="__('Available Days')" />
-                                    <x-input id="availabledays" class="block mt-1 w-full" type="text" name="availabledays" :value="old('availabledays')" autofocus />
+                                    <x-input id="availabledays" class="block mt-1 w-full" type="text" name="availabledays" :value="old('availabledays')" aria-describedby="Available Days" autofocus />
                                 </div>
                                 <div>
                                     <x-label for="availabletime" :value="__('Available Time')" />
-                                    <x-input id="availabletime" class="block mt-1 w-full" type="text" name="availabletime" :value="old('availabletime')" autofocus />
+                                    <x-input id="availabletime" class="block mt-1 w-full" type="text" name="availabletime" :value="old('availabletime')" aria-describedby="Available Time" autofocus />
                                 </div>                 
                             </div> 
                         </div>

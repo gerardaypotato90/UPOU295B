@@ -29,7 +29,7 @@
 						      
 						      <td>
 						      	<!--<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
-                                  <a href="/upload/{{$patientlist->patientid}}/{{$patientlist->doctorid}}" class="btn btn-primary">Send results</a>
+                                  <a href="/upload/{{$patientlist->patientid}}/{{$patientlist->doctorid}}" class="btn btn-primary" title="Send results">Send results</a>
 				        	  </td>
 						    </tr>
 						@endforeach

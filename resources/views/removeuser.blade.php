@@ -16,20 +16,20 @@
                         <div class="p-6">
                             <div class="flex items-center">
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><circle cx="12" cy="8" r="5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3,21 h18 C 21,12 3,12 3,21" /></svg>
-                                <a href="{{ route('removepatients') }}" class="ml-4 text-lg leading-7 font-semibold">Remove Patients</a>
+                                <a href="{{ route('removepatients') }}" class="ml-4 text-lg leading-7 font-semibold" title="Remove Patients">Remove Patients</a>
                             </div>
                         </div>
 
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><circle cx="12" cy="8" r="5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3,21 h18 C 21,12 3,12 3,21" /></svg>
-                                <a href="{{ route('removedoctors') }}" class="ml-4 text-lg leading-7 font-semibold">Remove Doctors</a>
+                                <a href="{{ route('removedoctors') }}" class="ml-4 text-lg leading-7 font-semibold" title="Remove Doctors">Remove Doctors</a>
                             </div>
                         </div>
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><circle cx="12" cy="8" r="5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3,21 h18 C 21,12 3,12 3,21" /></svg>
-                                <a href="{{ route('removedepartments') }}" class="ml-4 text-lg leading-7 font-semibold">Remove Department.</a>
+                                <a href="{{ route('removedepartments') }}" class="ml-4 text-lg leading-7 font-semibold" title="Remove Department">Remove Department.</a>
                             </div>
                         </div>
                     </div>

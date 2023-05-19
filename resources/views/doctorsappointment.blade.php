@@ -33,8 +33,8 @@
 						      <td>
 						      	<!--<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
 								@if($dpl->status != 'Done Check-up' && $dpl->status != 'No Show')
-								  <a href="appointmentstatus/{{$dpl->id}}" class="btn btn-primary">Check-up done</a>
-								  <a href="patientnoshow/{{$dpl->id}}" class="btn btn-primary">No show</a>
+								  <a href="appointmentstatus/{{$dpl->id}}" class="btn btn-primary" title="Check-up done">Check-up done</a>
+								  <a href="patientnoshow/{{$dpl->id}}" class="btn btn-primary" title="No show">No show</a>
 								@endif
 				        	  </td>
 						    </tr>

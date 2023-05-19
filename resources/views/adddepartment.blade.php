@@ -30,7 +30,7 @@
                             <div class="grid grid-rows-2 gap-6"> 
                                 <div>
                                     <x-label for="department" :value="__('Department')" />
-                                    <x-input id="department" class="block mt-1 w-full" type="text" name="department" :value="old('department')" autofocus />
+                                    <x-input id="department" class="block mt-1 w-full" type="text" name="department" :value="old('department')" aria-describedby="department" autofocus />
                                 </div>              
                             </div> 
                         </div>

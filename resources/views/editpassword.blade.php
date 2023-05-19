@@ -22,6 +22,7 @@
                                     <x-input id="new_password" class="block mt-1 w-full"
                                              type="password"
                                              name="password"
+                                             aria-describedby="password"
                                              autocomplete="new-password" />
                                 </div> 
                                 <div>
@@ -29,6 +30,7 @@
                                     <x-input id="confirm_password" class="block mt-1 w-full"
                                              type="password"
                                              name="password_confirmation"
+                                             aria-describedby="Confirm password"
                                              autocomplete="confirm-password" />
                                 </div>                      
                             </div>

@@ -55,7 +55,7 @@
 						      <td>{{$drl->availabletime}}</td>
 						      <td>
 						      	
-								<a href="/doctorschedule/{{$drl->doctorid}}" class="btn btn-primary">Book Appointment</a>
+								<a href="/doctorschedule/{{$drl->doctorid}}" class="btn btn-primary" title="Book Appointment">Book Appointment</a>
                                   <!--<button type="button" class="btn btn-primary">Book Appointment</button>-->
 				        	  </td>
 						    </tr>

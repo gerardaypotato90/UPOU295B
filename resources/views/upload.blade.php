@@ -77,8 +77,8 @@
 						    <tr class="alert" role="alert">
 						      <th scope="row">{{$photo->patientname}}</th>
 						      <td>{{$photo->diagnostic}}</td>
-						      <td><img src="{{ asset('storage/images/' . $photo->imagename) }}" width="250" height="300"></td>
-                              <td><a href="{{ route('download.downloads', ['filename' => $photo->imagename]) }}">Download Image</a></td>
+						      <td><img src="{{ asset('storage/images/' . $photo->imagename) }}" width="250" height="300" alt="Immage"></td>
+                              <td><a href="{{ route('download.downloads', ['filename' => $photo->imagename]) }}" title="Download Image">Download Image</a></td>
 						    </tr>
 						@endforeach
 						  </tbody>

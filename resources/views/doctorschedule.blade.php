@@ -69,9 +69,9 @@
 							  </td>
 						      <td>
 							  
-								  <x-input class="block mt-1 w-full" type="hidden" name="doctorid" value="{{$drs->doctorid}}" />
-								  <x-input class="block mt-1 w-full" type="hidden" name="doctorname" value="{{$drs->doctorname}}" />
-								  <x-input class="block mt-1 w-full" type="hidden" name="department" value="{{$drs->department}}" />
+								  <x-input class="block mt-1 w-full" type="hidden" name="doctorid" aria-describedby="doctorid" value="{{$drs->doctorid}}" />
+								  <x-input class="block mt-1 w-full" type="hidden" name="doctorname" aria-describedby="doctorname" value="{{$drs->doctorname}}" />
+								  <x-input class="block mt-1 w-full" type="hidden" name="department" aria-describedby="department" value="{{$drs->department}}" />
 								  <x-button class="ml-3 btn btn-primary">
                                		 {{ __('Book Now') }}
                             	  </x-button>

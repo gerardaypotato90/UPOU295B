@@ -56,7 +56,7 @@
 						    <tr class="alert" role="alert">
 						      <th scope="row">{{$pl->doctorname}}</th>
 						      <td>{{$pl->department}}</td>
-						      <td> <x-input id="rescheddate" id="datepicker" class="block mt-1 w-full datepicker form-control" type="text" name="rescheddate" :value="old('rescheddate')" autofocus /></td>
+						      <td> <x-input id="rescheddate" id="datepicker" class="block mt-1 w-full datepicker form-control" type="text" name="rescheddate" :value="old('rescheddate')" aria-describedby="Appointment Date" autofocus /></td>
 						      <td>{{$pl->status}}</td>
 						      <td>
 						      	<!--<a href="/updatedresched/{{$pl->id}}" class="btn btn-primary">Update Schedule</a>-->
