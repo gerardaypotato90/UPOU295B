@@ -16,20 +16,20 @@
 						<table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Patient Name</th>
-						      <th>Department</th>
-						      <th>Appointment Date</th>
-						      <th>Status</th>
-						      <th>Action</th>
+						      <th><div class="text-sm" aria-label="Patient Name">Patient Name</div></th>
+						      <th><div class="text-sm" aria-label="Department">Department</div></th>
+						      <th><div class="text-sm" aria-label="Appointment Date">Appointment Date</div></th>
+						      <th><div class="text-sm" aria-label="Status">Status</div></th>
+						      <th><div class="text-sm" aria-label="Action">Action</div></th>
 						    </tr>
 						  </thead>
 						  <tbody>
 						@foreach ($dplist as $dpl)
 						    <tr class="alert" role="alert">
-						      <th scope="row">{{$dpl->patientname}}</th>
-						      <td>{{$dpl->department}}</td>
-						      <td>{{$dpl->appointmentdate}}</td>
-						      <td>{{$dpl->status}}</td>
+						      <th scope="row"><div class="text-sm" aria-label="{{$dpl->patientname}}">{{$dpl->patientname}}</div></th>
+						      <td><div class="text-sm" aria-label="{{$dpl->department}}">{{$dpl->department}}</div></td>
+						      <td><div class="text-sm" aria-label="{{$dpl->appointmentdate}}">{{$dpl->appointmentdate}}</div></td>
+						      <td><div class="text-sm" aria-label="{{$dpl->status}}">{{$dpl->status}}</div></td>
 						      <td>
 						      	<!--<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
 								@if($dpl->status != 'Done Check-up' && $dpl->status != 'No Show')

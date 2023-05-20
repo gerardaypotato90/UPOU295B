@@ -16,16 +16,16 @@
 						<table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Patient Name</th>
-						      <th>Department</th>
-						      <th>Action</th>
+						      <th><div class="text-sm" aria-label="Patient Name">Patient Name</div></th>
+						      <th><div class="text-sm" aria-label="Department">Department</div></th>
+						      <th><div class="text-sm" aria-label="Action">Action</div></th>
 						    </tr>
 						  </thead>
 						  <tbody>
 						@foreach ($dplist as $dpl)
 						    <tr class="alert" role="alert">
-						      <th scope="row">{{$dpl->patientname}}</th>
-						      <td>{{$dpl->department}}</td>
+						      <th scope="row"><div class="text-sm" aria-label="{{$dpl->patientname}}">{{$dpl->patientname}}</div></th>
+						      <td><div class="text-sm" aria-label="{{$dpl->department}}">{{$dpl->department}}</div></td>
 						      
 						      <td>
 						      	<!--<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->

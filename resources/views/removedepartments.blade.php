@@ -12,8 +12,8 @@
         <table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Department</th>
-                  <th>Actions</th>
+						      <th><div class="text-sm" aria-label="Department">Department</div></th>
+                  <th><div class="text-sm" aria-label="Actions">Actions</div></th>
 						    </tr>
 						  </thead>
 						  <tbody>

@@ -16,15 +16,15 @@
 						<table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>From</th>
-						      <th>Message</th>
+						      <th><div class="text-sm" aria-label="From">From</div></th>
+						      <th><div class="text-sm" aria-label="Message">Message</div></th>
 						    </tr>
 						  </thead>
 						  <tbody>
                         @foreach ($doctormessages as $doctormessage)
 						    <tr class="alert" role="alert">
-						      <th scope="row">{{$doctormessage->patientname}}</th>
-						      <td>{{$doctormessage->message}}</td>
+						      <th scope="row"><div class="text-sm" aria-label="{{$doctormessage->patientname}}">{{$doctormessage->patientname}}</div></th>
+						      <td><div class="text-sm" aria-label="{{$doctormessage->message}}">{{$doctormessage->message}}</div></td>
 						    </tr>
                         @endforeach
 						  </tbody>

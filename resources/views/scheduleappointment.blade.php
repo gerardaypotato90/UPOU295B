@@ -39,20 +39,20 @@
 						<table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Doctor Name</th>
-						      <th>Department</th>
-						      <th>Available Days</th>
-						      <th>Available Time</th>
-						      <th>Book Appointment</th>
+						      <th><div class="text-sm" aria-label="Doctor Name">Doctor Name</div></th>
+						      <th><div class="text-sm" aria-label="Department">Department</div></th>
+						      <th><div class="text-sm" aria-label="Available Days">Available Days</div></th>
+						      <th><div class="text-sm" aria-label="Available Time">Available Time</div></th>
+						      <th><div class="text-sm" aria-label="Book Appointment">Book Appointment</div></th>
 						    </tr>
 						  </thead>
 						  <tbody>
 						@foreach ($drlist as $drl)
 						    <tr class="alert" role="alert">
-						      <th scope="row">{{$drl->doctorname}}</th>
-						      <td>{{$drl->department}}</td>
-						      <td>{{$drl->availabledays}}</td>
-						      <td>{{$drl->availabletime}}</td>
+						      <th scope="row"><div class="text-sm" aria-label="{{$drl->doctorname}}">{{$drl->doctorname}}</div></th>
+						      <td><div class="text-sm" aria-label="{{$drl->department}}">{{$drl->department}}</div></td>
+						      <td><div class="text-sm" aria-label="{{$drl->availabledays}}">{{$drl->availabledays}}</div></td>
+						      <td><div class="text-sm" aria-label="{{$drl->availabletime}}">{{$drl->availabletime}}</div></td>
 						      <td>
 						      	
 								<a href="/doctorschedule/{{$drl->doctorid}}" class="btn btn-primary" title="Book Appointment">Book Appointment</a>

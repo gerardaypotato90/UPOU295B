@@ -19,7 +19,7 @@
             <div>
                 <x-label for="email" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" aria-describedby="email" required autofocus />
             </div>
 
             <!-- Password -->
@@ -35,6 +35,7 @@
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                     type="password"
+                                    aria-describedby="password"
                                     name="password_confirmation" required />
             </div>
 

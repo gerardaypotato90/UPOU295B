@@ -20,11 +20,11 @@
 						<table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Patient Name</th>
-						      <th>Department</th>
-						      <th>Appointment Date</th>
-						      <th>Status</th>
-						      <th>Action</th>
+						      <th><div class="text-sm" aria-label="Patient Name">Patient Name</div></th>
+						      <th><div class="text-sm" aria-label="Department">Department</div></th>
+						      <th><div class="text-sm" aria-label="Appointment Date">Appointment Date</div></th>
+						      <th><div class="text-sm" aria-label="Status">Status</th>
+						      <th><div class="text-sm" aria-label="Action">Action</div></th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -54,13 +54,13 @@
                         @endif
                         @csrf
 						    <tr class="alert" role="alert">
-						      <th scope="row">{{$pl->doctorname}}</th>
-						      <td>{{$pl->department}}</td>
+						      <th scope="row"><div class="text-sm" aria-label="{{$pl->doctorname}}">{{$pl->doctorname}}</div></th>
+						      <td><div class="text-sm" aria-label="{{$pl->department}}">{{$pl->department}}</div></td>
 						      <td> <x-input id="rescheddate" id="datepicker" class="block mt-1 w-full datepicker form-control" type="text" name="rescheddate" :value="old('rescheddate')" aria-describedby="Appointment Date" autofocus /></td>
-						      <td>{{$pl->status}}</td>
+						      <td><div class="text-sm" aria-label="{{$pl->status}}">{{$pl->status}}</div></td>
 						      <td>
 						      	<!--<a href="/updatedresched/{{$pl->id}}" class="btn btn-primary">Update Schedule</a>-->
-                                  <x-button class="ml-3 btn btn-primary">
+                                  <x-button class="ml-3 btn btn-primary" aria-label="Update Schedule">
                                		 {{ __('Update Schedule') }}
                             	  </x-button>
 				        	  </td>

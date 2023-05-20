@@ -45,24 +45,24 @@
                     <div class="grid grid-cols-1 md:grid-cols-2">
                     @if (Route::has('login'))
                         @auth
-                        <div class="p-6">
+                        <div class="p-6" aria-label="dashboard">
                             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="dashboard">
                             <img src="{{ asset('images/Dashboard.png') }}" width="500" height="250">
                             </a>
                         </div>
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l" aria-label="dashboard">
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="dashboard">
                             <img src="{{ asset('images/Dasgboard2.png') }}" width="500" height="250">
                             </a>
                         </div>
                         @else
-                        <div class="p-6">
+                        <div class="p-6" aria-label="login">
                             <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" title="login">
                                 <img src="{{ asset('images/Log-in.png') }}" width="500" height="250">
                             </a>
                         </div>
                             @if (Route::has('register'))
-                            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l" aria-label="register">
                                 <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline" title="register">
                                     <img src="{{ asset('images/Register.png') }}" width="500" height="250">
                                 </a>

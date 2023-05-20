@@ -66,17 +66,17 @@
         <table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Patient Name</th>
-						      <th>Diagnosis</th>
-						      <th>Perscription/Lab test</th>
-                              <th>Actions</th>
+                              <th><div class="text-sm" aria-label="Patient Name">Patient Name</div></th>
+						      <th><div class="text-sm" aria-label="Diagnosis">Diagnosis</div></th>
+						      <th><div class="text-sm" aria-label="Perscription/Lab test">Perscription/Lab test</div></th>
+                              <th><div class="text-sm" aria-label="Actions">Actions</div></th>
 						    </tr>
 						  </thead>
 						  <tbody>
                         @foreach ($photos as $photo)
 						    <tr class="alert" role="alert">
-						      <th scope="row">{{$photo->patientname}}</th>
-						      <td>{{$photo->diagnostic}}</td>
+						      <th scope="row"><div class="text-sm" aria-label="{{$photo->patientname}}">{{$photo->patientname}}</div></th>
+						      <td><div class="text-sm" aria-label="{{$photo->diagnostic}}">{{$photo->diagnostic}}</div></td>
 						      <td><img src="{{ asset('storage/images/' . $photo->imagename) }}" width="250" height="300" alt="Immage"></td>
                               <td><a href="{{ route('download.downloads', ['filename' => $photo->imagename]) }}" title="Download Image">Download Image</a></td>
 						    </tr>

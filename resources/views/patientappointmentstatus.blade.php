@@ -16,20 +16,20 @@
 						<table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Doctor Name</th>
-						      <th>Department</th>
-						      <th>Appointment Date</th>
-						      <th>Status</th>
-						      <th>Action</th>
+						      <th><div class="text-sm" aria-label="Doctor Name">Doctor Name</div></th>
+						      <th><div class="text-sm" aria-label="Department">Department</div></th>
+						      <th><div class="text-sm" aria-label="Appointment Date">Appointment Date</div></th>
+						      <th><div class="text-sm" aria-label="Status">Status</div></th>
+						      <th><div class="text-sm" aria-label="Action">Action<div></th>
 						    </tr>
 						  </thead>
 						  <tbody>
 						@foreach ($plist as $pl)
 						    <tr class="alert" role="alert">
-						      <th scope="row">{{$pl->doctorname}}</th>
-						      <td>{{$pl->department}}</td>
-						      <td>{{$pl->appointmentdate}}</td>
-						      <td>{{$pl->status}}</td>
+						      <th scope="row"><div class="text-sm" aria-label="{{$pl->doctorname}}">{{$pl->doctorname}}</div></th>
+						      <td><div class="text-sm" aria-label="{{$pl->department}}">{{$pl->department}}</div></td>
+						      <td><div class="text-sm" aria-label="{{$pl->appointmentdate}}">{{$pl->appointmentdate}}</div></td>
+						      <td><div class="text-sm" aria-label="{{$pl->status}}">{{$pl->status}}</div></td>
 						      <td>
 						      	<!--<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
 								  <a href="patientreschedule/{{$pl->id}}" class="btn btn-primary" title="Reschedule">Reschedule</a>

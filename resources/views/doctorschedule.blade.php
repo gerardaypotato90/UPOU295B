@@ -49,22 +49,22 @@
 						<table class="table">
 						  <thead class="thead-dark">
 						    <tr>
-						      <th>Doctor Name</th>    
-						      <th>Available Days</th>
-						      <th>Available Time</th>
-							  <th>Date</th>
-						      <th>Action</th>
+						      <th><div class="text-sm" aria-label="Doctor Name">Doctor Name</div></th>    
+						      <th><div class="text-sm" aria-label="Available Days">Available Days</div></th>
+						      <th><div class="text-sm" aria-label="Available Time">Available Time</div></th>
+							  <th><div class="text-sm" aria-label="Date">Date</div></th>
+						      <th><div class="text-sm" aria-label="Action">Action</div></th>
 						    </tr>
 						  </thead>
 						  <tbody>
                         @foreach ($drsched as $drs)
 						    <tr class="alert" role="alert">
-						      <th scope="row">{{$drs->doctorname}}</th>
-						      <td>{{$drs->availabledays}}</td>
+						      <th scope="row"><div class="text-sm" aria-label="{{$drs->doctorname}}">{{$drs->doctorname}}</div></th>
+						      <td><div class="text-sm" aria-label="{{$drs->availabledays}}">{{$drs->availabledays}}</div></td>
 						      <td>{{$drs->availabletime}}</td>
 							  <td>
-							 	<div class="form-group">
-									<x-input type="text" name="appointmentdate" id="datepicker" class="datepicker form-control" />
+							 	<div class="form-group" aria-label="datepicker">
+									<x-input type="text" name="appointmentdate" id="datepicker" class="datepicker form-control" aria-describedby="datepicker" />
 								</div>
 							  </td>
 						      <td>
